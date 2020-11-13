@@ -32,3 +32,21 @@ print(full_email(
 [("d.nahel@gmail.com","djilali nahel"),
 ("m.karim@gmail.com", "mriza9 karim")
 ]))
+
+#list Comprehensions
+mylist=[]
+for x in range(1,11):
+    mylist.append(x*10)
+print(mylist)
+mylist= [x*10 for x in range(1,11)]
+print(mylist)
+# the same thing for the 1st exemple
+length= [len(letter) for letter in mylist]
+# we can also use condition
+div3= [x for x in range(0,101) if x%3==0]
+print(div3)
+## QUESTION: our odd function
+def odd_numbers(n):
+	return [x for x in range(0,n+1) if x%2!=0]
+
+print(odd_numbers(5))  # Should print [1, 3, 5]
